@@ -10,7 +10,7 @@ if(!String.prototype.endsWith) {
 }
 if(!document.location.hostname.endsWith('{{ site.suffix }}') && 
    !document.location.hostname.endsWith('{{ site.suffix }}.')){
-  document.title = document.title.replace(/(清华)|(tsinghua)|(tuna)/gi, '');
+  document.title = document.title.replace(/(nyist)|(cips)/gi, '');
   $().ready(() => {
     $(document.body).addClass('nonthu');
   })
