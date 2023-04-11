@@ -1,5 +1,5 @@
-# based on Ruby 3
-FROM ruby:3
+# based on Ruby 2.7
+FROM ruby:2.7
 
 # generate workdir
 RUN mkdir /data
