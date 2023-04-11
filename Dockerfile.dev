@@ -1,4 +1,4 @@
-FROM alpine:3.11
+FROM alpine:3
 MAINTAINER Xuanwo <xuanwo.cn@gmail.com>
 RUN apk add --update \
     nodejs ruby ruby-dev ruby-rdoc ruby-irb ruby-io-console ruby-nokogiri \
