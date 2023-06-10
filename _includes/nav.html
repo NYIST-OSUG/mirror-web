@@ -19,9 +19,9 @@
 						<source 
 						{% endif %}
 							srcset="/static/img/logo-small-dark.png 1x,
-											/static/img/logo-small-dark@2x.png 2x,
-											/static/img/logo-small-dark@3x.png 3x,
-											/static/img/logo-small-dark@4x.png 4x"
+									/static/img/logo-small-dark@2x.png 2x,
+									/static/img/logo-small-dark@3x.png 3x,
+									/static/img/logo-small-dark@4x.png 4x"
 						{% if site.issue %}
 							alt=""/>
 						{% else %}
@@ -30,9 +30,9 @@
 						{% unless site.issue %}
 						<img src="/static/img/logo-small.png" 
 							srcset="/static/img/logo-small.png 1x, 
-											/static/img/logo-small@2x.png 2x, 
-											/static/img/logo-small@3x.png 3x, 
-											/static/img/logo-small@4x.png 4x" 
+									/static/img/logo-small@2x.png 2x, 
+									/static/img/logo-small@3x.png 3x, 
+									/static/img/logo-small@4x.png 4x" 
 							alt=""/>
 						{% endunless %}
 					</picture>
@@ -44,10 +44,12 @@
       <ul class="nav navbar-nav" role="menubar">
         {% unless site.hide_navbar %}
         <li role="none"><a role="menuitem" href="{{ site.homelink }}">HOME</a></li>
-        <!-- <li role="none"><a role="menuitem" href="https://tuna.moe/events/">EVENTS</a></li>
-        <li role="none"><a role="menuitem" href="https://tuna.moe/blog/">BLOG</a></li>
-        <li role="none"><a role="menuitem" href="https://tuna.moe/feed.xml">RSS</a></li>
-        <li role="none"><a role="menuitem" href="https://podcast.tuna.moe/">PODCAST</a></li> -->
+        <!-- <li role="none"><a role="menuitem" href="https://cips.nyist.edu.cn/events/">EVENTS</a></li>
+        <li role="none"><a role="menuitem" href="https://cips.nyiust.edu.cn/blog/">BLOG</a></li>
+        <li role="none"><a role="menuitem" href="https://oj.nyist.edu.cn">OJ</a></li> -->
+		<li role="none"><a role="menuitem" href="/404.html">EVENTS</a></li>
+        <li role="none"><a role="menuitem" href="/404.html">BLOG</a></li>
+        <li role="none"><a role="menuitem" href="/404.html">OJ</a></li>
         <li role="none" class="active"><a role="menuitem" aria-checked="true" href="{{ site.url }}">MIRRORS</a></li>
         {% endunless %}
       </ul>

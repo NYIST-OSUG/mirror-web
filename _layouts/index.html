@@ -149,7 +149,7 @@
 								<li><a href="/status/#server-status">服务器状态</a></li>
 								<li><a href="/status/#syncing-status">同步状态</a></li>
 								{% endunless %}
-								<li class="thuhidden"><a href="">南阳理工学院 CIPS 学会</a></li>
+								<li class="thuhidden"><a href="">南阳理工学院 CIPS 协会</a></li>
 								<li><a href="https://github.com/tuna/tunasync">镜像管理器源码</a></li>
 								<li><a href="https://github.com/tuna/tunasync-scripts">自定义镜像脚本</a></li>
 							</ul>
@@ -157,7 +157,9 @@
 						{% unless site.hide_mirrorz %}
 						<div class="thuhidden {%if site.issue%}col-md-2{%endif%}">
 							<h4> {% fa_svg fas.fa-paperclip %} 友情链接 </h4>
-							<p><a href="{{ site.mirrorz_link }}">{{ site.mirrorz_desc }}</a></p>
+							<li><a href="https://www.nyist.edu.cn">南阳理工学院</a></li>
+							<li><a href="https://xxh.nyist.edu.cn">信息化建设与管理中心</a></li>
+							<li><a href="{{ site.mirrorz_link }}">{{ site.mirrorz_desc }}</a></li>
 						</div>
 						{% endunless %}
 					{% unless site.issue %}
