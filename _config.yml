@@ -12,7 +12,7 @@ brand: Nanyang Institute of Technology Open Source Mirror
 operator: 南阳理工学院信息化建设与管理中心
 author: Nanyang Institute of Technology CIPS Society
 desc: 致力于为国内和校内用户提供高质量的开源软件镜像、Linux 镜像源服务，帮助用户更方便地获取开源软件。本镜像站由南阳理工学院 CIPS 协会负责运行维护。
-logo: false
+logo: true
 meow_404: true
 issue_tag: cips
 baseurl: "" # the subpath of your site, e.g. /blog

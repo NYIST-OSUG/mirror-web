@@ -11,18 +11,18 @@ URL: http://alvarez.is
 
 ################################################################# */
 
-$color_thu_purple_dark: #C353D3;
+$color_thu_purple_dark: #900606;
 $color_light_grey: #888;
 $color_grey_dark: #aaa;
 $color_primary_light: #d8aff6;
 $color_primary_rgb: 92,48,125;
 $color_secondary_dark: #ddd;
-$color_link_dark: #6793cf;
-$color_link_hover: #62bbe7;
+$color_link_dark: #c04851;
+$color_link_hover: #da2424;
 $color_footer_heading: #ffffff;
-$color_footer_content: #bfc9d3;
+$color_footer_content: #d3bfbf;
 $font_default: 'Lato', 'Hiragino Sans GB', 'Source Han Sans SC', 'Source Han Sans CN', 'Noto Sans CJK SC', 'WenQuanYi Zen Hei', 'WenQuanYi Micro Hei', '微软雅黑', sans-serif;
-$color_row_hover_dark: #325475;
+$color_row_hover_dark: #512a2c;
 
 {% if site.issue %}
 $color_bg_dark: black;
@@ -33,12 +33,12 @@ $color_link: $color_link_dark;
 $color_navbar_bg: black;
 $color_row_hover: $color_row_hover_dark;
 {% else %}
-$color_thu_purple: #82318E;
+$color_thu_purple: #900606;
 $color_grey: #555;
-$color_secondary: #384452;
-$color_link: #088acb;
+$color_secondary: #684040;
+$color_link: #900606;
 $color_navbar_bg: #d3d3d3;
-$color_row_hover: #e0f3fc;
+$color_row_hover: #e3b4b8;
 $color_bg_dark: #222;
 {% endif %}
 
@@ -119,15 +119,15 @@ body {
 }
 
 .status-fail, .status-failed, .status-paused {
-    background-color: #fff4e3;
+    background-color: #fdd4c3;
     @include dark{
         background-color: #524841;
     }
 }
 .status-syncing {
-    background-color: #e3fffd;
+    background-color: #f7e3ab;
     @include dark{
-        background-color: #254059;
+        background-color: #545041;
     }
 }
 .sk-wave .sk-rect {
@@ -154,16 +154,22 @@ body {
             vertical-align: 40%;
             text-shadow: 1px 1px #888;
             margin-right: 4px;
-            background-color: #3aa0e6;
+            background-color: #f0d66d;
         }
         .label.label-status {
             vertical-align: 20%;
             margin-left: .5em;
         }
+        .label-info {
+            background-color: #a3a306;
+        }
+        .label-warning {
+            background-color: #ef6f48;
+        }
        .question-circle {
-            color: #234961;
+            color: #612323;
             @include dark{
-                color: #6e9cdb;
+                color: #db946e;
             }
         }
     }
