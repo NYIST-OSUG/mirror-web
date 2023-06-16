@@ -5,10 +5,11 @@ FROM ruby:2.7
 RUN mkdir /data
 WORKDIR /data
 
+RUN sed -i s@/deb.debian.org/@/mirror.nyist.edu.cn/@g /etc/apt/sources.list
 # install latest LTS nodejs
 RUN apt-get update
-RUN curl -fsSL "https://cdn.jsdelivr.net/gh/tj/n@7.3.0/bin/n#v14.17.1" | bash -s -- lts
-
+#RUN curl -fsSL "https://cdn.jsdelivr.net/gh/tj/n@7.3.0/bin/n#v14.17.1" | bash -s -- lts docker环境移除国外源
+RUN apt install nodejs -y
 # gem packages install
 COPY Gemfile /data/
 RUN gem install bundler

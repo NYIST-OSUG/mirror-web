@@ -1,6 +1,6 @@
 # tuna mirror
 #source "https://rubygems.org"
-source "https://mirrors.tuna.tsinghua.edu.cn/rubygems/"
+source "https://mirror.nysit.edu.cn/rubygems/"
 
 # gem list
 gem 'github-pages'
