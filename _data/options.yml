@@ -522,9 +522,6 @@ unlisted_mirrors:
   - link_to: 'github-release'
     name: "rust-analyzer"
     url: '/github-release/rust-analyzer/rust-analyzer/'
-  - link_to: 'github-release'
-    name: "thuthesis"
-    url: '/github-release/tuna/thuthesis'
 
 force_redirect_help_mirrors:
   - AOSP
