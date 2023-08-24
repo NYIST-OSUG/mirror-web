@@ -18,7 +18,7 @@ issue_tag: cips
 baseurl: "" # the subpath of your site, e.g. /blog
 permalink: "/:categories/:title/"
 url: "https://mirror.nyist.edu.cn"
-hostname: "https://mirror.nyist.edu.cn"
+hostname: "mirror.nyist.edu.cn"
 urlv4: "https://mirror4.nyist.edu.cn"
 urlv6: "https://mirror6.nyist.edu.cn"
 
