@@ -4,6 +4,8 @@ layout: help
 mirrorid: wine-builds
 ---
 
+<!-- 本 markdown 从 mirrorz-org/mirrorz-help 自动生成，如需修改，请修改 mirrorz-org/mirrorz-help 的对应部分 -->
+
 # Wine builds 软件仓库镜像使用帮助
 
 <form class="form-inline">
@@ -75,7 +77,8 @@ mirrorid: wine-builds
 <div class="form-group">
   <label>发行版：</label>
     <select id="select-2-0" class="form-control content-select" data-target="#content-2">
-      <option data-os_name="debian" data-release_name="bullseye" selected>Debian 11</option>
+      <option data-os_name="debian" data-release_name="bookworm" selected>Debian 12</option>
+      <option data-os_name="debian" data-release_name="bullseye">Debian 11</option>
       <option data-os_name="debian" data-release_name="buster">Debian 10</option>
       <option data-os_name="ubuntu" data-release_name="jammy">Ubuntu 22.04 LTS</option>
       <option data-os_name="ubuntu" data-release_name="focal">Ubuntu 20.04 LTS</option>
