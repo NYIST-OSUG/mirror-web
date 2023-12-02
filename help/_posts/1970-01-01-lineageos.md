@@ -2,7 +2,6 @@
 layout: help
 category: help
 mirrorid: lineageOS
-permalink: /help/lineageOS/
 ---
 
 ## lineageOS 源代码镜像使用帮助
@@ -53,7 +52,7 @@ repo init -u https://{{ site.hostname }}/git/lineageOS/LineageOS/android.git -b 
            fetch="https://github.com/" />
 
   <remote  name="lineage"
-           fetch="https://{{ site.hostname }}/git/lineageOS/"
+           fetch="https://{{ site.hostname }}/git/lineageOS/LineageOS/"
            review="review.lineageos.org" />
 ```
 
