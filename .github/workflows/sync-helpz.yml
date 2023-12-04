@@ -7,8 +7,8 @@ on:
         required: false
         type: string
         default: ''
-  schedule:
-    - cron: '33 22 * * *'  # 06:33 AM in Asia/Shanghai (UTC+8)
+  # schedule:
+    # - cron: '33 22 * * *'  # 06:33 AM in Asia/Shanghai (UTC+8)
 jobs:
   sync:
     runs-on: ubuntu-latest
