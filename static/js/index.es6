@@ -27,9 +27,23 @@ var vmMirList = new Vue({
 		filter: "",
 		rawMirrorList: [],
 		dateTooltip: localStorage.getItem('DateTooltip') !== 'false',
+		haveSearchBox: false,
 	},
 	created () {
 		this.refreshMirrorList();
+	},
+	mounted () {
+		if(this.$refs.search){
+			this.haveSearchBox = true;
+		}
+		if(this.haveSearchBox){
+			window.addEventListener("keypress", this.onKeyPress);
+		}
+	},
+	beforeDestroy() {
+		if(this.haveSearchBox){
+			window.removeEventListener("keypress", this.onKeyPress);
+		}
 	},
 	updated () {
 		$('.mirror-item-label').popover();
@@ -76,6 +90,12 @@ var vmMirList = new Vue({
 				self.rawMirrorList = status_data;
 				setTimeout(() => {self.refreshMirrorList()}, 10000);
 			});
+		},
+		onKeyPress(event) {
+			if (event.key === '/' && document.activeElement !== this.$refs.search) {
+				event.preventDefault();
+				this.$refs.search.focus();
+			}
 		}
 	}
 })
@@ -169,12 +189,20 @@ var vmIso = new Vue({
 	data: {
 		distroList: [],
 		selected: {},
-		curCategory: "os"
+		curCategory: "",
+		knownCategories: {
+			os: "操作系统",
+			app: "应用软件",
+			font: "字体",
+		},
+		availableCategories: []
 	},
 	created: function () {
 		var self = this;
 		$.getJSON("/static/status/isoinfo.json", function (isoinfo) {
 			self.distroList = isoinfo;
+			self.availableCategories = [... new Set(isoinfo.map((x) => x.category))]
+			self.curCategory = self.availableCategories[0];
 			self.selected = self.curDistroList[0];
 			if (window.location.hash.match(/#iso-download(\?.*)?/)) {
 				$('#isoModal').modal();
@@ -191,10 +219,6 @@ var vmIso = new Vue({
 		},
 	},
 	methods: {
-		showCategory(category) {
-			return this.distroList
-				.findIndex((x) => x.category === category) > -1;
-		},
 		switchDistro (distro) {
 			this.selected = distro;
 		},

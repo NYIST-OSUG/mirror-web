@@ -35,7 +35,7 @@
 						<div class="row">
 							<h3 id="mirror-title">{% fa_svg fas.fa-cube %} 镜像列表 </h3>
 							{% unless page.legacy %}
-							<input type="search" v-model.trim="filter" id="search" placeholder="搜索" autocomplete="off">
+							<input type="search" v-model.trim="filter" id="search" ref="search" placeholder="按 / 搜索" autocomplete="off">
 							{% endunless %}
 						</div>
 						<table class="table" v-if="mirrorList.length">
@@ -110,7 +110,7 @@
 								<li><a href="/news/#{{news.slug}}"><strong>{{news.date | date: "%Y-%m-%d"}}</strong> {{news.title}}</a></li>
 								{% endfor %}
 							</ul>
-							<div class="text-right"><a href="/news/"> more {% fa_svg fas.fa-angle-right %} </a></div>
+							<div class="text-right"><a href="/news/"> more {% fa_svg fas.fa-angles-right %} </a></div>
 						</div>
 						<div class="thuhidden {%if site.issue%}col-md-4{%endif%}">
 							<h4> {% fa_svg fas.fa-link %} 域名选择 </h4>
@@ -142,7 +142,7 @@
 							</ul>
 						</div>
 						<div {%if site.issue%}class="col-md-2"{%endif%}>
-							<h4> {% fa_svg fas.fa-up-right-from-square %} 相关链接 </h4>
+							<h4> {% fa_svg fas.fa-arrow-up-right-from-square %} 相关链接 </h4>
 							<ul>
 								<li><a href="/help/">使用帮助</a></li>
 								{% unless site.issue %}
@@ -183,12 +183,16 @@
 		        <h4 class="modal-title" id="isoModalLabel">获取安装镜像</h4>
 		      </div>
 		      <div class="modal-body">
-					<div class="row">
+					<div class="row" v-if="availableCategories.length > 0">
 						<div class="col-md-12">
 							<ul class="nav nav-tabs">
-								<li role="presentation" :class="[curCategory === 'os' ? 'active' : '']" @click="switchCategory('os')" v-show="showCategory('os')"><a href="#">操作系统</a></li>
-								<li role="presentation" :class="[curCategory === 'app' ? 'active' : '']" @click="switchCategory('app')" v-show="showCategory('app')"><a href="#">应用软件</a></li>
-								<li role="presentation" :class="[curCategory === 'font' ? 'active' : '']" @click="switchCategory('font')" v-show="showCategory('font')"><a href="#">字体</a></li>
+								<li role="presentation"
+									v-for="cat in availableCategories"
+									:class="[curCategory === cat ? 'active' : '']"
+									@click="switchCategory(cat)"
+								>
+									<a href="#">{{ knownCategories[cat] ? knownCategories[cat] : cat  }}</a>
+								</li>
 							</ul>
 						</div>
 						<div class="col-md-3">
