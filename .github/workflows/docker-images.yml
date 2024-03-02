@@ -3,11 +3,11 @@ name: docker-images
 on:
   push:
     branches: 
-    - master
+    - nyist-web
     - docker-test
   pull_request:
     branches: 
-    - master
+    - nyist-web
     - docker-test
 
 jobs:
@@ -28,7 +28,7 @@ jobs:
         env:
           TAG_NAME: ${{ github.ref }}
         run: |
-          if [ "${TAG_NAME##*/}" = "master" ]; then
+          if [ "${TAG_NAME##*/}" = "nyist-web" ]; then
             tag=latest
           else
             tag=build-test
