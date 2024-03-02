@@ -15,6 +15,14 @@ jobs:
             
     runs-on: ubuntu-latest
     steps:
+      -
+        name: Send start notification to WeCom
+        uses: chf007/action-wechat-work@master
+        env:
+          WECHAT_WORK_BOT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK_URL }}
+        with:
+          msgtype: text
+          content: "NYIST/mirror-web 测试构建已开始🚀"
       - 
         name: Determin docker tag
         env:
@@ -67,20 +75,10 @@ jobs:
           echo "I do not know how to setup cache"
           exit -1
       -
-        name: Login to DockerHub
-        uses: docker/login-action@v2
-        if: github.event_name == 'push'
+        name: Send end notification to WeCom
+        uses: chf007/action-wechat-work@master
+        env:
+          WECHAT_WORK_BOT_WEBHOOK: ${{ secrets.WECHAT_WEBHOOK_URL }}
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-      -
-        name: Build and push
-        uses: docker/build-push-action@v4
-        with:
-          context: .
-          file: Dockerfile.build
-          platforms: linux/amd64,linux/arm64
-          push: ${{ github.event_name == 'push' }}
-          tags: tunathu/mirror-web:${{ env.docker_tag }}
-          cache-from: type=local,src=/tmp/.buildx-cache
-          cache-to: type=local,dest=/tmp/.buildx-cache
+          msgtype: text
+          content: "NYIST/mirror-web 测试构建完成，请部署前端至服务器"
