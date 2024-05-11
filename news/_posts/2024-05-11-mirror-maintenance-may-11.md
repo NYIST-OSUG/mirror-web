@@ -11,3 +11,5 @@ category: news
 在维护期间，所有 HTTP(S) 请求将被重定向至[教育网联合镜像站](https://mirrors.cernet.edu.cn)，Rsync 服务将暂时中断，pypi不受影响。
 
 我们会尽快恢复服务，给您带来的不便，我们深表歉意。
+
+*Update 1*: 上述于 16:58 维护完成。
