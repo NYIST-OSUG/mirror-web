@@ -12,7 +12,7 @@ category: news
  * 新增 **nvme** 储存阵列
  * 移动以下仓库至新储存阵列中：
     * archlinux
-    * archliinuxcn
+    * archlinuxcn
     * bmclapi
     * debian
     * epel
