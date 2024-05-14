@@ -17,7 +17,11 @@ category: news
     * debian
     * epel
     * ubuntu
+ * 升级服务器外带管理 iDRAC 及BIOS
 
 在维护期间，所有服务将暂时中断。
 
 我们会尽快恢复服务，给您带来的不便，我们深表歉意。
+
+*Update 1*: 维护时间顺延至 20:00 。
+*Update 2*: 维护于 19:56 分顺利完成。
