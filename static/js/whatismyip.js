@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		.catch((error) => {
 			ipv4Fetched = false;
 			displayIPInfo();
-			console.error("获取IPv4地址时发生错误:", error);
+			console.error("GET IPv4 Address error:", error);
 		});
 
 	fetch("https://whatismyip6.mirror.nyist.edu.cn/")
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		.catch((error) => {
 			ipv6Fetched = false;
 			displayIPInfo();
-			console.error("获取IPv6地址时发生错误:", error);
+			console.error("GET IPv6 Address error:", error);
 		});
 
 	function displayIPInfo() {
