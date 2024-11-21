@@ -30,6 +30,8 @@ mirror_desc:
     desc: Alpine Linux 的安装镜像和官方软件包仓库
   - name: anaconda
     desc: 用于科学计算的 Python 发行版
+  - name: anolis
+    desc: Anolis OS 龙蜥操作系统的安装镜像和官方软件包仓库
   - name: anthon
     desc: Anthon Linux（安同 Linux）的安装镜像和官方软件包仓库
   - name: aosp-monthly
